@@ -3,7 +3,7 @@
         <app-login-form (subscribeClicked)="isLogin = !isLogin"></app-login-form>
     }
     @else {
-        <app-subscribe-form (loginClicked)="isLogin = !isLogin"></app-subscribe-form>
+        <app-subscribe-form (userCreated)="createUser($event)" (loginClicked)="isLogin = !isLogin"></app-subscribe-form>
     }
     
 </div>

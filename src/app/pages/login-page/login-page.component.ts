@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { LoginFormComponent } from '../../components/login-form/login-form.component';
 import { SubscribeFormComponent } from '../../components/subscribe-form/subscribe-form.component';
+import { UserService } from '../../services/user.service';
+import { User } from '../../models/user.interface';
 
 
 @Component({
@@ -11,4 +13,14 @@ import { SubscribeFormComponent } from '../../components/subscribe-form/subscrib
 })
 export class LoginPageComponent {
   public isLogin = true;
+
+  public userService = inject(UserService);
+
+  constructor() {
+    console.log(this.userService.getlist())
+  }
+
+  public createUser(user: User): void {
+    console.log('USER :', user);
+  }
 }

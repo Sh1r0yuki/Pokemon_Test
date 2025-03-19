@@ -1,0 +1,34 @@
+<mat-card appearance="raised">
+    <mat-card-header>
+        <mat-card-title>S'inscrire</mat-card-title>
+        <mat-card-subtitle>Créez un compte pour vous connecter</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <form [formGroup]="formGroup">
+          <mat-form-field appearance="outline">
+            <mat-label>Nom</mat-label>
+            <input matInput>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Prenom</mat-label>
+            <input matInput>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Pseudo</mat-label>
+            <input matInput>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput>
+          </mat-form-field>
+        </form>
+      </mat-card-content>
+    <mat-card-actions align="end">
+        <button mat-button (click)="loginClicked.emit()">S'inscrire</button>
+        <button mat-flat-button>Se connecter</button>
+    </mat-card-actions>
+</mat-card>

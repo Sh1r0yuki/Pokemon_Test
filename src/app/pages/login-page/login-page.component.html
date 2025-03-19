@@ -1,0 +1,9 @@
+<div class="container">
+    @if(isLogin) {
+        <app-login-form (subscribeClicked)="isLogin = !isLogin"></app-login-form>
+    }
+    @else {
+        <app-subscribe-form (loginClicked)="isLogin = !isLogin"></app-subscribe-form>
+    }
+    
+</div>

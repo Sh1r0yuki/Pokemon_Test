@@ -3,6 +3,11 @@
         <mat-card-title>
             {{name}}
         </mat-card-title>
+        <div class="favorite-button">
+            <button mat-icon-button (click)="toggleFavorite()" [color]="isFavorite ? 'warn' : 'default'">
+                <mat-icon>{{ isFavorite ? 'favorite' : 'favorite_border' }}</mat-icon>
+            </button>
+        </div>
     </mat-card-header>
     <mat-card-content>
         <img [src]="imageUrl" />

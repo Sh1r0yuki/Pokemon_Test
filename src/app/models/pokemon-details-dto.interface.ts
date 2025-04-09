@@ -6,6 +6,7 @@ export interface PokemonDetailsDto {
   sprites: ISprite;
   types: IType[];
   abilities: IAbility[];
+  stats: IStat[];
 }
 
 export interface ISprite  {
@@ -17,3 +18,9 @@ export interface IType { type: IName };
 export interface IAbility { ability: IName};
 
 export interface IName { name: string };
+
+export interface IStat {
+  base_stat: number;
+  effort: number;
+  stat: IName;
+};
